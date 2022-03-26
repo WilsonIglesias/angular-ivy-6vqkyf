@@ -1,0 +1,13 @@
+<h2>Lista de Tarefas</h2>
+<form (ngSubmit)="AddTarefas()">
+  <label for="tarefa">Digite uma tarefa:</label>
+  <input id="tarefa" name="tarefa" type="text" [(ngModel)]="tarefa" />
+
+  <button type="submit">Adicionar tarefa</button>
+</form>
+
+<ul>
+  <li *ngFor="let el of tarefas">
+    {{ el }}
+  </li>
+</ul>
